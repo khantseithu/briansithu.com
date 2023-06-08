@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { Container } from '@/components/Container'
 import { Prose } from '@/components/Prose'
 import { formatDate } from '@/lib/formatDate'
+import { createOgImage } from '@/lib/createOgImage'
 
 function ArrowLeftIcon(props) {
   return (
@@ -25,6 +26,12 @@ export function ArticleLayout({
   previousPathname,
 }) {
   let router = useRouter()
+  const ogImage = createOgImage({
+    title: meta.title,
+    meta: ["khantsithu.tech", meta.date].join(" · "),
+  })
+
+  console.log(ogImage)
 
   if (isRssFeed) {
     return children
@@ -33,8 +40,13 @@ export function ArticleLayout({
   return (
     <>
       <Head>
-        <title>{`${meta.title} - Spencer Sharp`}</title>
+        <title>{`${meta.title} - Khant Sithu`}</title>
         <meta name="description" content={meta.description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:width" content="1600" />
+        <meta property="og:image:height" content="836" />
+        <meta property="og:image:alt" content={meta.title} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Container className="mt-16 lg:mt-32">
         <div className="xl:relative">
