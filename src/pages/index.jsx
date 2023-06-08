@@ -14,8 +14,8 @@ import {
 } from '@/components/SocialIcons'
 import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoUpwork from '@/images/logos/upwork.svg'
+import logoStarbucks from '@/images/logos/AIESEC-Human-Blue.jpg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -139,10 +139,10 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'Upwork',
+      title: 'Freelance Software Developer',
+      logo: logoUpwork,
+      start: '2023',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
@@ -163,11 +163,11 @@ function Resume() {
       end: '2014',
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
+      company: 'AIESEC In Myanmar',
+      title: 'Marketing Team Member',
       logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      start: '2023 Jan',
+      end: '2023 May',
     },
   ]
 
@@ -251,49 +251,46 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>
-          Spencer Sharp - Software designer, founder, and amateur astronaut
+          Khant Sithu - Software developer
         </title>
         <meta
           name="description"
-          content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="I'm Khant Sithu, a passionate CS student and freelance software developer from Myanmar. With expertise in MERN Stack, TypeScript, Next.js, and Tailwind CSS, I bring ideas to life through code, delivering high-quality software solutions. Explore my portfolio to discover innovative projects and collaborations."
         />
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
+            Software devloper, freelancer, and innovator.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            I'm Khant Sithu, a CS student from Myanmar and a freelance software developer. With a strong foundation in computer science and expertise in technologies like MERN Stack, TypeScript, Next.js, and Tailwind CSS, I bring ideas to life through code and deliver high-quality software solutions.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://twitter.com"
+              href="https://twitter.com/khantseithuu"
               aria-label="Follow on Twitter"
               icon={TwitterIcon}
             />
             <SocialLink
-              href="https://instagram.com"
+              href="https://instagram.com/khantseithuu"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
             />
             <SocialLink
-              href="https://github.com"
+              href="https://github.com/khantseithu"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/khantsithu"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
           </div>
         </div>
       </Container>
-      <Photos />
+      {/* <Photos /> */}
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">

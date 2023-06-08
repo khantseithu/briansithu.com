@@ -10,7 +10,7 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.jpg'
+import portraitImage from '@/images/portrait.png'
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
@@ -41,7 +41,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About - Spencer Sharp</title>
+        <title>About - Khant Sithu</title>
         <meta
           name="description"
           content="I’m Spencer Sharp. I live in New York City, where I design the future."
@@ -61,50 +61,35 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Spencer Sharp. I live in New York City, where I design the
-              future.
+              I’m Khant Sithu, a freelance software developer.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I’ve loved making things for as long as I can remember, and
-                wrote my first program when I was 6 years old, just two weeks
-                after my mom brought home the brand new Macintosh LC 550 that I
-                taught myself to type on.
+                From a young age, I was drawn to computers and the limitless possibilities they offered. I started my journey into the world of software engineering during the COVID-19 outbreak, where I was introduced to HTML and fell in love with creating websites. This experience led me to explore JavaScript, which further fueled my fascination for coding and solidified my decision to pursue computer science as my major.
               </p>
               <p>
-                The only thing I loved more than computers as a kid was space.
-                When I was 8, I climbed the 40-foot oak tree at the back of our
-                yard while wearing my older sister’s motorcycle helmet, counted
-                down from three, and jumped — hoping the tree was tall enough
-                that with just a bit of momentum I’d be able to get to orbit.
+                To build a strong foundation, I embarked on the CS50 course by David Malan at Harvard University, where I gained a comprehensive understanding of computer science fundamentals. Additionally, I have completed numerous Coursera courses, continuously expanding my knowledge and staying up-to-date with the latest technologies. My journey continued at university, where I delved into Python, Java, and databases. Thanks to my strong foundational knowledge, I found these subjects enjoyable and relatively straightforward to grasp.
               </p>
               <p>
-                I spent the next few summers indoors working on a rocket design,
-                while I recovered from the multiple surgeries it took to fix my
-                badly broken legs. It took nine iterations, but when I was 15 I
-                sent my dad’s Blackberry into orbit and was able to transmit a
-                photo back down to our family computer from space.
+                Although my university experience has been entirely online, I have dedicated my free time to pursuing full-stack JavaScript development. I have made significant progress in mastering the MERN Stack, TypeScript, Next.js, and Tailwind CSS. This exploration has allowed me to create dynamic and responsive web applications that combine both functionality and aesthetics. Constantly pushing my boundaries, I am passionate about honing my skills and exploring new frontiers in web development.
               </p>
               <p>
-                Today, I’m the founder of Planetaria, where we’re working on
-                civilian space suits and manned shuttle kits you can assemble at
-                home so that the next generation of kids really <em>can</em>{' '}
-                make it to orbit — from the comfort of their own backyards.
+                Beyond my academic and technical pursuits, I find entertainment in watching movies, listening to music, and reading books for personal growth. These hobbies provide me with inspiration and a means of relaxation, helping me maintain a well-rounded approach to life. As I continue my journey as a CS student and web developer, I am excited to contribute to the ever-evolving world of technology. I firmly believe in the power of software to shape our future and make a positive impact. Let's collaborate and bring innovative ideas to life!
               </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href="#" icon={TwitterIcon}>
+              <SocialLink href="https://twitter.com/khantseithuu" icon={TwitterIcon}>
                 Follow on Twitter
               </SocialLink>
-              <SocialLink href="#" icon={InstagramIcon} className="mt-4">
+              <SocialLink href="https://instagram.com/khantseithuu" icon={InstagramIcon} className="mt-4">
                 Follow on Instagram
               </SocialLink>
-              <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+              <SocialLink href="https://github.com/khantseithu" icon={GitHubIcon} className="mt-4">
                 Follow on GitHub
               </SocialLink>
-              <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
+              <SocialLink href="https://linkedin.com/in/khantsithu" icon={LinkedInIcon} className="mt-4">
                 Follow on LinkedIn
               </SocialLink>
               <SocialLink
@@ -112,7 +97,7 @@ export default function About() {
                 icon={MailIcon}
                 className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
               >
-                spencer@planetaria.tech
+                khantseithuu@gmail.com
               </SocialLink>
             </ul>
           </div>
