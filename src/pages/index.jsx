@@ -15,7 +15,7 @@ import {
 import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoUpwork from '@/images/logos/upwork.svg'
-import logoStarbucks from '@/images/logos/AIESEC-Human-Blue.jpg'
+import logoAiesec from '@/images/logos/AIESEC-Human-Blue.jpg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -148,24 +148,24 @@ function Resume() {
         dateTime: new Date().getFullYear(),
       },
     },
-    {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
-    },
-    {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
-    },
+    // {
+    //   company: 'Airbnb',
+    //   title: 'Product Designer',
+    //   logo: logoAirbnb,
+    //   start: '2014',
+    //   end: '2019',
+    // },
+    // {
+    //   company: 'Facebook',
+    //   title: 'iOS Software Engineer',
+    //   logo: logoFacebook,
+    //   start: '2011',
+    //   end: '2014',
+    // },
     {
       company: 'AIESEC In Myanmar',
       title: 'Marketing Team Member',
-      logo: logoStarbucks,
+      logo: logoAiesec,
       start: '2023 Jan',
       end: '2023 May',
     },
@@ -250,9 +250,7 @@ export default function Home({ articles }) {
   return (
     <>
       <Head>
-        <title>
-          Khant Sithu - Software developer
-        </title>
+        <title>Khant Sithu - Software developer</title>
         <meta
           name="description"
           content="I'm Khant Sithu, a passionate CS student and freelance software developer from Myanmar. With expertise in MERN Stack, TypeScript, Next.js, and Tailwind CSS, I bring ideas to life through code, delivering high-quality software solutions. Explore my portfolio to discover innovative projects and collaborations."
@@ -264,7 +262,11 @@ export default function Home({ articles }) {
             Software devloper, freelancer, and innovator.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I'm Khant Sithu, a CS student from Myanmar and a freelance software developer. With a strong foundation in computer science and expertise in technologies like MERN Stack, TypeScript, Next.js, and Tailwind CSS, I bring ideas to life through code and deliver high-quality software solutions.
+            I'm Khant Sithu, a CS student from Myanmar and a freelance software
+            developer. With a strong foundation in computer science and
+            expertise in technologies like MERN Stack, TypeScript, Next.js, and
+            Tailwind CSS, I bring ideas to life through code and deliver
+            high-quality software solutions.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
