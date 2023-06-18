@@ -11,38 +11,53 @@ import logoPlanetaria from '@/images/logos/planetaria.svg'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'GameHub',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
+      'A web application designed to help users discover new and exciting video games, featuring advanced filtering, infinite scrolling, and fully type-safe code.',
+    link: {
+      href: 'https://github.com/khantseithu/game-hub',
+      label: 'GameHub',
+    },
     logo: logoPlanetaria,
   },
   {
-    name: 'Animaginary',
+    name: 'Tech Mart',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
+      ' A full-stack e-commerce web application built with the MERN stack, offering browsing of tech products, user authentication, cart functionality, product rating and reviews, and PayPal integration.',
+    link: {
+      href: 'https://github.com/khantseithu/TechMart',
+      label: 'TechMart',
+    },
     logo: logoAnimaginary,
   },
   {
-    name: 'HelioStream',
+    name: 'Streamify',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
+      'A music streaming app (Spotify clone) with advanced features including song upload, Stripe payment integration, sleek UI design, responsiveness, authentication, favorites/playlists, and more.',
+    link: {
+      href: 'https://github.com/khantseithu/streamify',
+      label: 'Streamify',
+    },
     logo: logoHelioStream,
   },
   {
-    name: 'cosmOS',
+    name: 'SummariAi',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
+      "A web application utilizing OpenAI's GPT-4 to generate summaries of articles, offering efficient summarization using React.js, Vite.js, Redux Toolkit, and OpenAI's GPT-4.",
+    link: {
+      href: 'https://github.com/khantseithu/SummariAI',
+      label: 'SummariAI',
+    },
     logo: logoCosmos,
   },
   {
-    name: 'OpenShuttle',
+    name: 'Wild Oasis',
     description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
+      'A custom-built application for managing a small boutique hotel called "Wild Oasis" with 8 luxurious wooden cabins, handling bookings, cabin management, and guest information, serving as an internal application used to check-in guests upon arrival. The backend of the application is built with Supabase.',
+    link: {
+      href: 'https://github.com/khantseithu/wild-oasis',
+      label: 'Wild Oasis',
+    },
     logo: logoOpenShuttle,
   },
 ]
