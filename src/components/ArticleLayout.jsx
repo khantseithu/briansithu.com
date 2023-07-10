@@ -28,10 +28,9 @@ export function ArticleLayout({
   let router = useRouter()
   const ogImage = createOgImage({
     title: meta.title,
-    meta: ["khantsithu - software developer", meta.date].join(" · "),
+    meta: ['khantsithu - software developer', meta.date].join(' · '),
   })
 
-  console.log(ogImage)
   if (isRssFeed) {
     return children
   }

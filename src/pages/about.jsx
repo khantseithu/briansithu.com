@@ -65,31 +65,94 @@ export default function About() {
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                From a young age, I was drawn to computers and the limitless possibilities they offered. I started my journey into the world of software engineering during the COVID-19 outbreak, where I was introduced to HTML and fell in love with creating websites. This experience led me to explore JavaScript, which further fueled my fascination for coding and solidified my decision to pursue computer science as my major.
+                I am a dedicated and versatile Full Stack Developer, driven by a
+                relentless pursuit of innovation and excellence. With a strong
+                foundation in web development, I have honed my skills across a
+                wide range of technologies and frameworks to deliver captivating
+                and functional solutions.
               </p>
               <p>
-                To build a strong foundation, I embarked on the CS50 course by David Malan at Harvard University, where I gained a comprehensive understanding of computer science fundamentals. Additionally, I have completed numerous Coursera courses, continuously expanding my knowledge and staying up-to-date with the latest technologies. My journey continued at university, where I delved into Python, Java, and databases. Thanks to my strong foundational knowledge, I found these subjects enjoyable and relatively straightforward to grasp.
+                Throughout my career, I have mastered the art of crafting
+                seamless user experiences on the frontend. Leveraging the power
+                of React.js and Next.js, I design and develop intuitive
+                interfaces that engage users and leave a lasting impression.
+                With an eye for detail and a deep understanding of UI/UX
+                principles, I ensure that every pixel is in its rightful place.
               </p>
               <p>
-                Although my university experience has been entirely online, I have dedicated my free time to pursuing full-stack JavaScript development. I have made significant progress in mastering the MERN Stack, TypeScript, Next.js, and Tailwind CSS. This exploration has allowed me to create dynamic and responsive web applications that combine both functionality and aesthetics. Constantly pushing my boundaries, I am passionate about honing my skills and exploring new frontiers in web development.
+                On the backend, I wield the power of Node.js, Express, PHP, and
+                Laravel to build robust and scalable applications. From crafting
+                intricate server-side logic to integrating third-party APIs, I
+                thrive on solving complex challenges and delivering efficient
+                and reliable backend systems.
               </p>
               <p>
-                Beyond my academic and technical pursuits, I find entertainment in watching movies, listening to music, and reading books for personal growth. These hobbies provide me with inspiration and a means of relaxation, helping me maintain a well-rounded approach to life. As I continue my journey as a CS student and web developer, I am excited to contribute to the ever-evolving world of technology. I firmly believe in the power of software to shape our future and make a positive impact. Let's collaborate and bring innovative ideas to life!
+                On the backend, I wield the power of Node.js, Express, PHP, and
+                Laravel to build robust and scalable applications. From crafting
+                intricate server-side logic to integrating third-party APIs, I
+                thrive on solving complex challenges and delivering efficient
+                and reliable backend systems.
+              </p>
+              <p>
+                To streamline collaboration and ensure the integrity of your
+                projects, I harness the power of Git for version control. With
+                an organized and efficient workflow, I work seamlessly with
+                teams to deliver exceptional results.
+              </p>
+              <p>
+                And when it comes to deployment and scalability, I am no
+                stranger to the world of Docker. I encapsulate your
+                applications, creating lightweight and portable containers that
+                can be effortlessly deployed across various environments.
+              </p>
+              <p>
+                Driven by a passion for continuous learning, I stay up to date
+                with the latest industry trends and technologies. This enables
+                me to offer cutting-edge solutions that push the boundaries of
+                what's possible, giving you a competitive edge in the digital
+                landscape.
+              </p>
+              <p>
+                But enough about me. This portfolio website is about showcasing
+                the projects I have worked on, the problems I have solved, and
+                the impact I have made. I invite you to explore my portfolio,
+                dive into the details of each project, and witness the passion
+                and dedication that I pour into every line of code.
+              </p>
+              <p>
+                Thank you for visiting my portfolio website. I am excited about
+                the opportunity to collaborate and create something truly
+                remarkable together.
               </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href="https://twitter.com/khantseithuu" icon={TwitterIcon}>
+              <SocialLink
+                href="https://twitter.com/khantseithuu"
+                icon={TwitterIcon}
+              >
                 Follow on Twitter
               </SocialLink>
-              <SocialLink href="https://instagram.com/khantseithuu" icon={InstagramIcon} className="mt-4">
+              <SocialLink
+                href="https://instagram.com/khantseithuu"
+                icon={InstagramIcon}
+                className="mt-4"
+              >
                 Follow on Instagram
               </SocialLink>
-              <SocialLink href="https://github.com/khantseithu" icon={GitHubIcon} className="mt-4">
+              <SocialLink
+                href="https://github.com/khantseithu"
+                icon={GitHubIcon}
+                className="mt-4"
+              >
                 Follow on GitHub
               </SocialLink>
-              <SocialLink href="https://linkedin.com/in/khantsithu" icon={LinkedInIcon} className="mt-4">
+              <SocialLink
+                href="https://linkedin.com/in/khantsithu"
+                icon={LinkedInIcon}
+                className="mt-4"
+              >
                 Follow on LinkedIn
               </SocialLink>
               <SocialLink

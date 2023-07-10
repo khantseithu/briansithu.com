@@ -6,6 +6,7 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
 import logoCosmos from '@/images/logos/cosmos.svg'
 import logoHelioStream from '@/images/logos/helio-stream.svg'
+import logoStreamify from '@/images/logos/streamify.svg'
 import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 
@@ -19,6 +20,16 @@ const projects = [
       label: 'GameHub',
     },
     logo: logoPlanetaria,
+  },
+  {
+    name: 'Wild Oasis',
+    description:
+      'A custom-built application for managing a small boutique hotel called "Wild Oasis" with 8 luxurious wooden cabins, handling bookings, cabin management, and guest information, serving as an internal application used to check-in guests upon arrival. The backend of the application is built with Supabase.',
+    link: {
+      href: 'https://github.com/khantseithu/wild-oasis',
+      label: 'Wild Oasis',
+    },
+    logo: logoOpenShuttle,
   },
   {
     name: 'Tech Mart',
@@ -38,7 +49,7 @@ const projects = [
       href: 'https://github.com/khantseithu/streamify',
       label: 'Streamify',
     },
-    logo: logoHelioStream,
+    logo: logoStreamify,
   },
   {
     name: 'SummariAi',
@@ -49,16 +60,6 @@ const projects = [
       label: 'SummariAI',
     },
     logo: logoCosmos,
-  },
-  {
-    name: 'Wild Oasis',
-    description:
-      'A custom-built application for managing a small boutique hotel called "Wild Oasis" with 8 luxurious wooden cabins, handling bookings, cabin management, and guest information, serving as an internal application used to check-in guests upon arrival. The backend of the application is built with Supabase.',
-    link: {
-      href: 'https://github.com/khantseithu/wild-oasis',
-      label: 'Wild Oasis',
-    },
-    logo: logoOpenShuttle,
   },
 ]
 
