@@ -5,16 +5,16 @@ import {
   PhoneIcon,
 } from '@heroicons/react/24/outline'
 
-export default function Example() {
+export default function Contact() {
   return (
     <div className="relative isolate">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h2 className="sm:4xl text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               Get in touch
             </h2>
-            <p className="mr-3 mt-6 text-lg leading-8 text-gray-600 dark:text-zinc-400">
+            <p className="mr-6 mt-6 leading-8 text-gray-600 dark:text-zinc-400">
               If you have any questions, feedback, or collaboration
               opportunities, I would love to hear from you. Feel free to reach
               out using the contact form below, and I'll get back to you as soon
@@ -76,7 +76,7 @@ export default function Example() {
         <form
           action="https://formsubmit.co/ac272cdd6bcc7d22fbabd9d63a627740"
           method="POST"
-          className=""
+          className="px-4"
         >
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
