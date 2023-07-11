@@ -263,7 +263,7 @@ function Education() {
     {
       school: 'Meta',
       title: 'Meta Front-End Developer',
-      logo: logoMeta,
+      logo: logoFacebook,
       start: '2022',
       end: '2023',
     },
