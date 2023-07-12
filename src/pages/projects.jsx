@@ -19,6 +19,15 @@ const projects = [
       href: 'https://github.com/khantseithu/game-hub',
       label: 'GameHub',
     },
+    tags: [
+      'React',
+      'TypeScript',
+      'Chakra UI',
+      'React Query',
+      'Zustand',
+      'React Router',
+      'Rawg.io Api',
+    ],
     logo: logoPlanetaria,
   },
   {
@@ -29,6 +38,14 @@ const projects = [
       href: 'https://github.com/khantseithu/wild-oasis',
       label: 'Wild Oasis',
     },
+    tags: [
+      'React',
+      'TypeScript',
+      'Styled Components',
+      'Supabase',
+      'React Query',
+      'Rechart',
+    ],
     logo: logoOpenShuttle,
   },
   {
@@ -39,6 +56,15 @@ const projects = [
       href: 'https://github.com/khantseithu/TechMart',
       label: 'TechMart',
     },
+    tags: [
+      'React',
+      'Redux Toolkit',
+      'RTK Query',
+      'Node.js',
+      'Express.js',
+      'MongoDb',
+      'Bootstrap',
+    ],
     logo: logoAnimaginary,
   },
   {
@@ -49,6 +75,7 @@ const projects = [
       href: 'https://github.com/khantseithu/streamify',
       label: 'Streamify',
     },
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase'],
     logo: logoStreamify,
   },
   {
@@ -59,6 +86,7 @@ const projects = [
       href: 'https://github.com/khantseithu/SummariAI',
       label: 'SummariAI',
     },
+    tags: ['React', 'Redux Toolkit', 'RTK Query', 'TypeScript', 'Tailwind CSS'],
     logo: logoCosmos,
   },
 ]
@@ -106,6 +134,13 @@ export default function Projects() {
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {project.tags.length > 0
+                  ? project.tags.map((tag) => (
+                      <Card.Tags key={tag}>{tag}</Card.Tags>
+                    ))
+                  : null}
+              </div>
               <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
                 <LinkIcon className="h-6 w-6 flex-none" />
                 <span className="ml-2">{project.link.label}</span>
