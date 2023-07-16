@@ -87,13 +87,6 @@ export default function About() {
                 and reliable backend systems.
               </p>
               <p>
-                On the backend, I wield the power of Node.js, Express, PHP, and
-                Laravel to build robust and scalable applications. From crafting
-                intricate server-side logic to integrating third-party APIs, I
-                thrive on solving complex challenges and delivering efficient
-                and reliable backend systems.
-              </p>
-              <p>
                 To streamline collaboration and ensure the integrity of your
                 projects, I harness the power of Git for version control. With
                 an organized and efficient workflow, I work seamlessly with
@@ -118,11 +111,6 @@ export default function About() {
                 the impact I have made. I invite you to explore my portfolio,
                 dive into the details of each project, and witness the passion
                 and dedication that I pour into every line of code.
-              </p>
-              <p>
-                Thank you for visiting my portfolio website. I am excited about
-                the opportunity to collaborate and create something truly
-                remarkable together.
               </p>
             </div>
           </div>

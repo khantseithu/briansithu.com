@@ -361,11 +361,13 @@ export default function Home({ articles }) {
             Software devloper, freelancer, and innovator.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I'm Khant Sithu, a CS student from Myanmar and a freelance software
-            developer. With a strong foundation in computer science and
-            expertise in technologies like MERN Stack, TypeScript, Next.js, and
-            Tailwind CSS, I bring ideas to life through code and deliver
-            high-quality software solutions.
+            I'm Khant Sithu, a versatile Full Stack Developer with a passion for
+            bringing ideas to life through code. With a strong foundation in
+            computer science and a deep understanding of DevOps practices, I
+            craft high-quality software solutions that span the entire stack.
+            From intuitive front-end interfaces to robust back-end systems, I'm
+            driven by the desire to create user-friendly applications that leave
+            a lasting impact.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink

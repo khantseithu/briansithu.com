@@ -12,12 +12,33 @@ import logoPlanetaria from '@/images/logos/planetaria.svg'
 
 const projects = [
   {
+    name: 'Fashion Fusion',
+    description:
+      'A feature-rich Fashion Fusion E-Commerce Platform with Admin Dashboard and Storefront, built using Next.js 13, Tailwind, Prisma, MySQL, Clerk, and Stripe, offering multiple vendor/store management, product customization, revenue tracking, and secure payment processing.',
+    link: {
+      href: 'https://github.com/khantseithu/fashion-fusion',
+      label: 'https://github.com/khantseithu/fashion-fusion',
+    },
+    tags: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Prisma',
+      'Zustand',
+      'Stripe',
+      'Clerk',
+      'MySQL',
+      'Shadcn UI',
+    ],
+    logo: logoPlanetaria,
+  },
+  {
     name: 'GameHub',
     description:
       'A web application designed to help users discover new and exciting video games, featuring advanced filtering, infinite scrolling, and fully type-safe code.',
     link: {
       href: 'https://github.com/khantseithu/game-hub',
-      label: 'GameHub',
+      label: 'https://github.com/khantseithu/game-hub',
     },
     tags: [
       'React',
@@ -36,7 +57,7 @@ const projects = [
       'A custom-built application for managing a small boutique hotel called "Wild Oasis" with 8 luxurious wooden cabins, handling bookings, cabin management, and guest information, serving as an internal application used to check-in guests upon arrival. The backend of the application is built with Supabase.',
     link: {
       href: 'https://github.com/khantseithu/wild-oasis',
-      label: 'Wild Oasis',
+      label: 'https://github.com/khantseithu/wild-oasis',
     },
     tags: [
       'React',
@@ -54,7 +75,7 @@ const projects = [
       ' A full-stack e-commerce web application built with the MERN stack, offering browsing of tech products, user authentication, cart functionality, product rating and reviews, and PayPal integration.',
     link: {
       href: 'https://github.com/khantseithu/TechMart',
-      label: 'TechMart',
+      label: 'https://github.com/khantseithu/TechMart',
     },
     tags: [
       'React',
@@ -73,7 +94,7 @@ const projects = [
       'A music streaming app (Spotify clone) with advanced features including song upload, Stripe payment integration, sleek UI design, responsiveness, authentication, favorites/playlists, and more.',
     link: {
       href: 'https://github.com/khantseithu/streamify',
-      label: 'Streamify',
+      label: 'https://github.com/khantseithu/streamify',
     },
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase'],
     logo: logoStreamify,
@@ -84,7 +105,7 @@ const projects = [
       "A web application utilizing OpenAI's GPT-4 to generate summaries of articles, offering efficient summarization using React.js, Vite.js, Redux Toolkit, and OpenAI's GPT-4.",
     link: {
       href: 'https://github.com/khantseithu/SummariAI',
-      label: 'SummariAI',
+      label: 'https://github.com/khantseithu/SummariAI',
     },
     tags: ['React', 'Redux Toolkit', 'RTK Query', 'TypeScript', 'Tailwind CSS'],
     logo: logoCosmos,
