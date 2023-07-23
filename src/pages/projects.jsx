@@ -12,6 +12,29 @@ import logoPlanetaria from '@/images/logos/planetaria.svg'
 
 const projects = [
   {
+    name: 'sithu.ai',
+    description:
+      'sithu.ai is an AI assistant web application that utilizes natural language processing and AI services like OpenAI and Replicate to provide helpful tools and services through conversation.',
+    link: {
+      href: 'https://github.com/khantseithu/sithu.ai',
+      label: 'https://github.com/khantseithu/sithu.ai',
+    },
+    tags: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Prisma',
+      'Zustand',
+      'Stripe',
+      'Clerk',
+      'MySQL',
+      'Shadcn UI',
+      'Openai',
+      'Replicate',
+    ],
+    logo: logoPlanetaria,
+  },
+  {
     name: 'Fashion Fusion',
     description:
       'A feature-rich Fashion Fusion E-Commerce Platform with Admin Dashboard and Storefront, built using Next.js 13, Tailwind, Prisma, MySQL, Clerk, and Stripe, offering multiple vendor/store management, product customization, revenue tracking, and secure payment processing.',
@@ -143,14 +166,14 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <Card as="li" key={project.name}>
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              {/*<div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
                   src={project.logo}
                   alt=""
                   className="h-8 w-8"
                   unoptimized
                 />
-              </div>
+              </div> */}
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>
