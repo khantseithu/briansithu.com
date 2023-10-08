@@ -16,6 +16,7 @@ import {
 import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoMeta from '@/images/logos/meta.jpg'
+import logoBeyondLimit from '@/images/logos/bllogo.png'
 
 import logoUpwork from '@/images/logos/upwork.svg'
 import logoUoPeople from '@/images/logos/UoPeople.jpg'
@@ -162,6 +163,16 @@ function Newsletter() {
 
 function Resume() {
   let resume = [
+    {
+      company: 'Beyond Limits Technology',
+      title: 'Software Developer',
+      logo: logoBeyondLimit,
+      start: '2023',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
     {
       company: 'Upwork',
       title: 'Freelance Software Developer',
