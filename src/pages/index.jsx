@@ -387,7 +387,7 @@ export default function Home({ articles }) {
         <title>Khant Sithu</title>
         <meta
           name="description"
-          content="I'm Khant Sithu, a passionate CS student and freelance software developer from Myanmar. With expertise in MERN Stack, TypeScript, Next.js, and Tailwind CSS, I bring ideas to life through code, delivering high-quality software solutions. Explore my portfolio to discover innovative projects and collaborations."
+          content="Explore the innovative world of an indie hacker, Khant Sithu, as he crafts feature-rich projects and weaves dreams into digital reality. From motivational coding journeys to whimsical adventures in creativity, discover a unique perspective on innovation and self-discovery."
         />
       </Head>
       <Container className="mt-9">
