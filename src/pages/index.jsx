@@ -151,7 +151,7 @@ function Newsletter() {
           placeholder="Email address"
           aria-label="Email address"
           required
-          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
+          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-amber-400 dark:focus:ring-amber-400/10 sm:text-sm"
         />
         <Button type="submit" className="ml-4 flex-none">
           Join
@@ -282,6 +282,23 @@ function Education() {
       logo: logoFacebook,
       start: '2022',
       end: '2023',
+      link: "https://www.credly.com/badges/168f5e11-4ca3-4a64-81b4-bb937971ecc2"
+    },
+    {
+      school: 'Meta',
+      title: 'Meta Back-End Developer',
+      logo: logoFacebook,
+      start: '2022',
+      end: '2023',
+      link: "https://www.credly.com/badges/168f5e11-4ca3-4a64-81b4-bb937971ecc2"
+    },
+    {
+      school: 'Meta',
+      title: 'Meta Full-Stack Developer',
+      logo: logoFacebook,
+      start: '2022',
+      end: '2023',
+      link: "https://www.credly.com/badges/c48ff909-439a-4d1a-8daa-38908f638a68"
     },
   ]
 
@@ -304,8 +321,10 @@ function Education() {
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Course</dt>
-              <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+              <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100 underline cursor-pointer">
+                <a href={role.link} target="_blank" rel="noopener noreferrer">
                 {role.title}
+                </a>
               </dd>
               <dt className="sr-only">School</dt>
               <dd className="text-xs text-zinc-500 dark:text-zinc-400">
@@ -374,16 +393,10 @@ export default function Home({ articles }) {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software Developer, make stuffs
+            Khant Sithu
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I'm Khant Sithu, a versatile Full Stack Developer with a passion for
-            bringing ideas to life through code. With a strong foundation in
-            computer science and a deep understanding of DevOps practices, I
-            craft high-quality software solutions that span the entire stack.
-            From intuitive front-end interfaces to robust back-end systems, I'm
-            driven by the desire to create user-friendly applications that leave
-            a lasting impact.
+          Embracing the indie hacker spirit, I navigate the coding landscape with determination. Every project is a step closer to unlocking new heights of innovation and self-discovery.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -424,9 +437,9 @@ export default function Home({ articles }) {
           </div>
         </div>
       </Container>
-      <Container className="mt-10 w-full md:mt-12">
+      {/* <Container className="mt-10 w-full md:mt-12">
         <Contact />
-      </Container>
+      </Container> */}
     </>
   )
 }
