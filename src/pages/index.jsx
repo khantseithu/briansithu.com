@@ -173,16 +173,16 @@ function Resume() {
         dateTime: new Date().getFullYear(),
       },
     },
-    {
-      company: 'Upwork',
-      title: 'Freelance Software Developer',
-      logo: logoUpwork,
-      start: '2023',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
-    },
+    // {
+    //   company: 'Upwork',
+    //   title: 'Freelance Software Developer',
+    //   logo: logoUpwork,
+    //   start: '2023',
+    //   end: {
+    //     label: 'Present',
+    //     dateTime: new Date().getFullYear(),
+    //   },
+    // },
     // {
     //   company: 'Airbnb',
     //   title: 'Product Designer',
