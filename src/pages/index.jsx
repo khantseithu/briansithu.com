@@ -119,7 +119,7 @@ function Article({ article }) {
         {formatDate(article.date)}
       </Card.Eyebrow>
       <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
+      <Card.Cta>Read note</Card.Cta>
     </Card>
   )
 }
@@ -282,7 +282,7 @@ function Education() {
       logo: logoFacebook,
       start: '2022',
       end: '2023',
-      link: "https://www.credly.com/badges/168f5e11-4ca3-4a64-81b4-bb937971ecc2"
+      link: 'https://www.credly.com/badges/168f5e11-4ca3-4a64-81b4-bb937971ecc2',
     },
     {
       school: 'Meta',
@@ -290,7 +290,7 @@ function Education() {
       logo: logoFacebook,
       start: '2022',
       end: '2023',
-      link: "https://www.credly.com/badges/d0d567cd-8640-40e0-a885-479e16062828"
+      link: 'https://www.credly.com/badges/d0d567cd-8640-40e0-a885-479e16062828',
     },
     {
       school: 'Meta',
@@ -298,7 +298,7 @@ function Education() {
       logo: logoFacebook,
       start: '2022',
       end: '2023',
-      link: "https://www.credly.com/badges/c48ff909-439a-4d1a-8daa-38908f638a68"
+      link: 'https://www.credly.com/badges/c48ff909-439a-4d1a-8daa-38908f638a68',
     },
   ]
 
@@ -321,9 +321,9 @@ function Education() {
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Course</dt>
-              <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100 underline cursor-pointer">
+              <dd className="w-full flex-none cursor-pointer text-sm font-medium text-zinc-900 underline dark:text-zinc-100">
                 <a href={role.link} target="_blank" rel="noopener noreferrer">
-                {role.title}
+                  {role.title}
                 </a>
               </dd>
               <dt className="sr-only">School</dt>
@@ -396,7 +396,9 @@ export default function Home({ articles }) {
             Hi, I'm Khant Sithu.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          Embracing the indie hacker spirit, I navigate the coding landscape with determination. Every project is a step closer to unlocking new heights of innovation and self-discovery.
+            Embracing the indie hacker spirit, I navigate the coding landscape
+            with determination. Every project is a step closer to unlocking new
+            heights of innovation and self-discovery.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
