@@ -11,6 +11,16 @@ import {
   TwitterIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.png'
+import { Section } from '@/components/Section'
+import {
+  Blogs,
+  Books,
+  PeopleWorthFollowingOnTwitter,
+  Podcasts,
+  Quotes,
+} from '@/data'
+import { Quote } from '@/components/Quote'
+import { useEffect, useState } from 'react'
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
@@ -38,6 +48,11 @@ function MailIcon(props) {
 }
 
 export default function About() {
+  const [randomQuote, setRandomQuote] = useState()
+
+  useEffect(() => {
+    setRandomQuote(Quotes[Math.floor(Math.random() * Quotes.length)])
+  }, [])
   return (
     <>
       <Head>
@@ -61,57 +76,126 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Khant Sithu, a freelance software developer.
+              I’m Khant Sithu, a passionate Full Stack Developer .
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I am a dedicated and versatile Full Stack Developer, driven by a
-                relentless pursuit of innovation and excellence. With a strong
-                foundation in web development, I have honed my skills across a
-                wide range of technologies and frameworks to deliver captivating
-                and functional solutions.
+                I don't just write code; I craft digital experiences that leave
+                a lasting impact. My journey in the tech realm has been nothing
+                short of thrilling, with a special affinity for indie hacking
+                and creating projects that resonate with innovation.
               </p>
-              <p>
-                Throughout my career, I have mastered the art of crafting
-                seamless user experiences on the frontend. Leveraging the power
-                of React.js and Next.js, I design and develop intuitive
-                interfaces that engage users and leave a lasting impression.
-                With an eye for detail and a deep understanding of UI/UX
-                principles, I ensure that every pixel is in its rightful place.
-              </p>
-              <p>
-                On the backend, I wield the power of Node.js, Express, PHP, and
-                Laravel to build robust and scalable applications. From crafting
-                intricate server-side logic to integrating third-party APIs, I
-                thrive on solving complex challenges and delivering efficient
-                and reliable backend systems.
-              </p>
-              <p>
-                To streamline collaboration and ensure the integrity of your
-                projects, I harness the power of Git for version control. With
-                an organized and efficient workflow, I work seamlessly with
-                teams to deliver exceptional results.
-              </p>
-              <p>
-                And when it comes to deployment and scalability, I am no
-                stranger to the world of Docker. I encapsulate your
-                applications, creating lightweight and portable containers that
-                can be effortlessly deployed across various environments.
-              </p>
-              <p>
-                Driven by a passion for continuous learning, I stay up to date
-                with the latest industry trends and technologies. This enables
-                me to offer cutting-edge solutions that push the boundaries of
-                what's possible, giving you a competitive edge in the digital
-                landscape.
-              </p>
-              <p>
-                But enough about me. This portfolio website is about showcasing
-                the projects I have worked on, the problems I have solved, and
-                the impact I have made. I invite you to explore my portfolio,
-                dive into the details of each project, and witness the passion
-                and dedication that I pour into every line of code.
-              </p>
+              <section>
+                <h2 className="mb-4 text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl">
+                  What Defines Me:
+                </h2>
+                <ul className="list-inside ">
+                  <li>
+                    <em className="font-semibold">Indie Hacker</em> : I thrive
+                    in the world of indie hacking, infusing magic into every
+                    project I undertake. From sleek front-ends to robust
+                    back-end systems, I embark on a creative journey to bring
+                    ideas to life.
+                  </li>
+                  <li>
+                    <em className="font-semibold">Passionate Learner</em> : As a
+                    perpetual student of technology, I am always on the lookout
+                    for the latest stacks and methodologies. My commitment to
+                    continuous learning propels me to stay ahead in the dynamic
+                    landscape of software development.
+                  </li>
+                  <li>
+                    <em className="font-semibold">Dreamer & Creator</em> :
+                    Beyond the lines of code, I'm a dreamer weaving aspirations
+                    into the digital canvas. Each project is a testament to my
+                    love for turning ideas into tangible, user-friendly
+                    applications.
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className=" mb-4 text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl">
+                  Books worth reading
+                </h2>
+                <ul className="list-inside list-disc ">
+                  {Books.map((book) => (
+                    <li key={book.name}>
+                      <a
+                        href={book.link}
+                        target="_blank"
+                        className="text-zinc-600 underline hover:text-amber-500 dark:text-zinc-400 dark:hover:text-amber-500"
+                      >
+                        {book.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+
+              <section>
+                <h2 className=" mb-4 text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl">
+                  Podcasts I listen to
+                </h2>
+                <ul className="list-inside list-disc ">
+                  {Podcasts.map((podcast) => (
+                    <li key={podcast.name}>
+                      <a
+                        href={podcast.link}
+                        target="_blank"
+                        className="text-zinc-600 underline hover:text-amber-500 dark:text-zinc-400 dark:hover:text-amber-500"
+                      >
+                        {podcast.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+
+              <section>
+                <h2 className=" mb-4 text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl">
+                  Blogs I read
+                </h2>
+                <ul className="list-inside list-disc ">
+                  {Blogs.map((blog) => (
+                    <li key={blog.name}>
+                      <a
+                        href={blog.link}
+                        target="_blank"
+                        className="text-zinc-600 underline hover:text-amber-500 dark:text-zinc-400 dark:hover:text-amber-500"
+                      >
+                        {blog.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+
+              <section>
+                <h2 className=" mb-4 text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl">
+                  People with unique perspectives I follow
+                </h2>
+                <ul className="list-inside list-disc ">
+                  {PeopleWorthFollowingOnTwitter.map((people) => (
+                    <li key={people.name}>
+                      <a
+                        href={people.link}
+                        target="_blank"
+                        className="text-zinc-600 underline hover:text-amber-500 dark:text-zinc-400 dark:hover:text-amber-500"
+                      >
+                        {people.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+
+              {randomQuote && (
+                <Quote
+                  quote={randomQuote.content}
+                  author={randomQuote.author}
+                />
+              )}
             </div>
           </div>
           <div className="lg:pl-20">
