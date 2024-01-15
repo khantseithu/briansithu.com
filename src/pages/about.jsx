@@ -123,7 +123,6 @@ export default function About() {
                     <li key={book.name}>
                       <a
                         href={book.link}
-                        target="_blank"
                         className="text-zinc-600 underline hover:text-amber-500 dark:text-zinc-400 dark:hover:text-amber-500"
                       >
                         {book.name}
@@ -142,8 +141,8 @@ export default function About() {
                     <li key={podcast.name}>
                       <a
                         href={podcast.link}
-                        target="_blank"
                         className="text-zinc-600 underline hover:text-amber-500 dark:text-zinc-400 dark:hover:text-amber-500"
+                        rel="noreferrer"
                       >
                         {podcast.name}
                       </a>
@@ -161,8 +160,8 @@ export default function About() {
                     <li key={blog.name}>
                       <a
                         href={blog.link}
-                        target="_blank"
                         className="text-zinc-600 underline hover:text-amber-500 dark:text-zinc-400 dark:hover:text-amber-500"
+                        rel="noreferrer"
                       >
                         {blog.name}
                       </a>
@@ -180,8 +179,8 @@ export default function About() {
                     <li key={people.name}>
                       <a
                         href={people.link}
-                        target="_blank"
                         className="text-zinc-600 underline hover:text-amber-500 dark:text-zinc-400 dark:hover:text-amber-500"
+                        rel="noreferrer"
                       >
                         {people.name}
                       </a>
