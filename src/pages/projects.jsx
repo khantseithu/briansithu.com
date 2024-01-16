@@ -5,12 +5,22 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
 import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
 import logoStreamify from '@/images/logos/streamify.svg'
 import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoCodeCraft from '@/images/logos/codecraft.svg'
 
 const projects = [
+  {
+    name: 'CodeCraft',
+    description:
+      'CodeCraft is my bootstrapped side project aiming to make coding more intuitive for complete beginners. I built CodeCraft to provide the structured, hands-on coding education I wish I had when starting out.',
+    link: {
+      href: 'https://codecraftmm.vercel.app/',
+      label: 'https://codecraftmm.vercel.app/',
+    },
+    logo: logoCodeCraft,
+  },
   {
     name: 'sithu.ai',
     description:
