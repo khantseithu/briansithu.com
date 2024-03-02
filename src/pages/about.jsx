@@ -80,10 +80,9 @@ export default function About() {
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I don't just write code; I craft digital experiences that leave
-                a lasting impact. My journey in the tech realm has been nothing
-                short of thrilling, with a special affinity for indie hacking
-                and creating projects that resonate with innovation.
+                Hey there! I'm Khant Sithu, a Full Stack Developer with a
+                passion for all things JavaScript and TypeScript. Welcome to my
+                corner of the web!
               </p>
               <section>
                 <h2 className="mb-4 text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl">
@@ -98,18 +97,23 @@ export default function About() {
                     ideas to life.
                   </li>
                   <li>
-                    <em className="font-semibold">Passionate Learner</em> : As a
-                    perpetual student of technology, I am always on the lookout
-                    for the latest stacks and methodologies. My commitment to
-                    continuous learning propels me to stay ahead in the dynamic
-                    landscape of software development.
+                    <em className="font-semibold">
+                      Passion for Web Development
+                    </em>{' '}
+                    : I thrive on using JavaScript and TypeScript to build
+                    dynamic and responsive web applications.
                   </li>
                   <li>
-                    <em className="font-semibold">Dreamer & Creator</em> :
-                    Beyond the lines of code, I'm a dreamer weaving aspirations
-                    into the digital canvas. Each project is a testament to my
-                    love for turning ideas into tangible, user-friendly
-                    applications.
+                    <em className="font-semibold">Startup Enthusiast</em> : I'm
+                    deeply immersed in the world of startups, SaaS, and
+                    product-focused endeavors, always on the lookout for new
+                    ideas and opportunities.
+                  </li>
+                  <li>
+                    <em className="font-semibold">Continuous Learner</em> :
+                    Whether it's exploring the latest tech trends or diving into
+                    a captivating story, I believe in the power of continuous
+                    learning and personal growth.
                   </li>
                 </ul>
               </section>
