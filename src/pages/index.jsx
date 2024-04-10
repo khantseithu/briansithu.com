@@ -173,16 +173,16 @@ function Resume() {
         dateTime: new Date().getFullYear(),
       },
     },
-    // {
-    //   company: 'Upwork',
-    //   title: 'Freelance Software Developer',
-    //   logo: logoUpwork,
-    //   start: '2023',
-    //   end: {
-    //     label: 'Present',
-    //     dateTime: new Date().getFullYear(),
-    //   },
-    // },
+    {
+      company: 'Upwork',
+      title: 'Freelance Software Developer',
+      logo: logoUpwork,
+      start: '2023',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
     // {
     //   company: 'Airbnb',
     //   title: 'Product Designer',
@@ -197,13 +197,13 @@ function Resume() {
     //   start: '2011',
     //   end: '2014',
     // },
-    {
-      company: 'AIESEC In Myanmar',
-      title: 'Marketing Team Member',
-      logo: logoAiesec,
-      start: '2023 Jan',
-      end: '2023 May',
-    },
+    // {
+    //   company: 'AIESEC In Myanmar',
+    //   title: 'Marketing Team Member',
+    //   logo: logoAiesec,
+    //   start: '2023 Jan',
+    //   end: '2023 May',
+    // },
   ]
 
   return (
@@ -235,9 +235,8 @@ function Resume() {
               <dt className="sr-only">Date</dt>
               <dd
                 className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-                aria-label={`${role.start.label ?? role.start} until ${
-                  role.end.label ?? role.end
-                }`}
+                aria-label={`${role.start.label ?? role.start} until ${role.end.label ?? role.end
+                  }`}
               >
                 <time dateTime={role.start.dateTime ?? role.start}>
                   {role.start.label ?? role.start}
@@ -333,9 +332,8 @@ function Education() {
               <dt className="sr-only">Date</dt>
               <dd
                 className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-                aria-label={`${role.start.label ?? role.start} until ${
-                  role.end.label ?? role.end
-                }`}
+                aria-label={`${role.start.label ?? role.start} until ${role.end.label ?? role.end
+                  }`}
               >
                 <time dateTime={role.start.dateTime ?? role.start}>
                   {role.start.label ?? role.start}
