@@ -10,7 +10,7 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.png'
+import portraitImage from '@/images/avatar-2023.jpeg'
 import { Section } from '@/components/Section'
 import {
   Blogs,

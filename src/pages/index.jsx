@@ -17,6 +17,7 @@ import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoMeta from '@/images/logos/meta.jpg'
 import logoBeyondLimit from '@/images/logos/bllogo.png'
+import logoViabells from '@/images/logos/ViabellsLogo.png'
 
 import logoUpwork from '@/images/logos/upwork.svg'
 import logoUoPeople from '@/images/logos/UoPeople.jpg'
@@ -84,9 +85,9 @@ function AcademicCap(props) {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke="currentColor"
-      class="h-6 w-6"
+      className="h-6 w-6"
     >
       <path
         stroke-linecap="round"
@@ -160,19 +161,32 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Beyond Limits Technology',
-      title: 'Software Developer',
-      logo: logoBeyondLimit,
-      start: '2023',
+      company: 'Viabells',
+      title: 'Software Engineer | Full Stack',
+      logo: logoViabells,
+      website: "https://www.viabells.com/",
+      start: '2024',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
       },
     },
     {
+      company: 'Beyond Limits Technology',
+      title: 'Software Engineer | Full Stack',
+      logo: logoBeyondLimit,
+      website: "https://www.beyondlimitsmm.com/",
+      start: '2023',
+      end: {
+        label: '2024',
+        dateTime: 2024,
+      },
+    },
+    {
       company: 'Upwork',
       title: 'Freelance Software Developer',
       logo: logoUpwork,
+      website: "https://www.upwork.com/",
       start: '2023',
       end: {
         label: 'Present',
@@ -222,7 +236,9 @@ function Resume() {
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
               <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                {role.company}
+                <Link href={role?.website} target="_blank" rel="noopener noreferrer" className='hover:underline'>
+                  {role.company}
+                </Link>
               </dd>
               <dt className="sr-only">Role</dt>
               <dd className="text-xs text-zinc-500 dark:text-zinc-400">
