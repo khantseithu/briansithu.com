@@ -13,6 +13,7 @@ import logoCodeCraft from '@/images/logos/codecraft.svg'
 const projects = [
   {
     name: 'CodeCraft',
+    banner: "",
     description:
       'CodeCraft is my bootstrapped side project aiming to make coding more intuitive for complete beginners. I built CodeCraft to provide the structured, hands-on coding education I wish I had when starting out.',
     link: {
@@ -20,29 +21,17 @@ const projects = [
       label: 'https://codecraftmm.vercel.app/',
     },
     logo: logoCodeCraft,
-  },
-  {
-    name: 'sithu.ai',
-    description:
-      'sithu.ai is an AI assistant web application that utilizes natural language processing and AI services like OpenAI and Replicate to provide helpful tools and services through conversation.',
-    link: {
-      href: 'https://github.com/khantseithu/sithu.ai',
-      label: 'https://github.com/khantseithu/sithu.ai',
-    },
     tags: [
-      'Next.js',
-      'TypeScript',
-      'Tailwind CSS',
-      'Prisma',
-      'Zustand',
-      'Stripe',
-      'Clerk',
-      'MySQL',
-      'Shadcn UI',
-      'Openai',
-      'Replicate',
-    ],
-    logo: logoPlanetaria,
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+      "Zustand",
+      "Stripe",
+      "Clerk",
+      "MySQL",
+      "Shadcn UI"
+    ]
   },
   {
     name: 'Fashion Fusion',
@@ -67,6 +56,7 @@ const projects = [
   },
   {
     name: 'GameHub',
+    banner: "",
     description:
       'A web application designed to help users discover new and exciting video games, featuring advanced filtering, infinite scrolling, and fully type-safe code.',
     link: {
@@ -86,6 +76,7 @@ const projects = [
   },
   {
     name: 'Wild Oasis',
+    banner: "",
     description:
       'A custom-built application for managing a small boutique hotel called "Wild Oasis" with 8 luxurious wooden cabins, handling bookings, cabin management, and guest information, serving as an internal application used to check-in guests upon arrival. The backend of the application is built with Supabase.',
     link: {
@@ -104,6 +95,7 @@ const projects = [
   },
   {
     name: 'Tech Mart',
+    banner: "",
     description:
       ' A full-stack e-commerce web application built with the MERN stack, offering browsing of tech products, user authentication, cart functionality, product rating and reviews, and PayPal integration.',
     link: {
@@ -123,6 +115,7 @@ const projects = [
   },
   {
     name: 'Streamify',
+    banner: "",
     description:
       'A music streaming app (Spotify clone) with advanced features including song upload, Stripe payment integration, sleek UI design, responsiveness, authentication, favorites/playlists, and more.',
     link: {
@@ -134,6 +127,7 @@ const projects = [
   },
   {
     name: 'SummariAi',
+    banner: "",
     description:
       "A web application utilizing OpenAI's GPT-4 to generate summaries of articles, offering efficient summarization using React.js, Vite.js, Redux Toolkit, and OpenAI's GPT-4.",
     link: {

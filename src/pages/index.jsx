@@ -406,9 +406,7 @@ export default function Home({ articles }) {
             Hi, I'm Khant Sithu.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Embracing the indie hacker spirit, I navigate the coding landscape
-            with determination. Every project is a step closer to unlocking new
-            heights of innovation and self-discovery.
+          I help people make the world better through quality software.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
