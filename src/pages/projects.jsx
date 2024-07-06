@@ -170,11 +170,13 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <Card as="li" key={project.name}>
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <div className="relative z-10 flex items-center justify-center p-2 rounded-lg bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800">
                 <Image
-                  src={project.logo}
+                  src="https://images.unsplash.com/photo-1720157974034-cdb419e50002?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt=""
-                  className="h-8 w-8"
+                  className="rounded-lg object-cover"
+                  width={1470}
+                  height={1470}
                   unoptimized
                 />
               </div>
@@ -182,13 +184,6 @@ export default function Projects() {
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>
-              {/* <div className="mt-3 flex flex-wrap gap-2">
-                {project.tags.length > 0
-                  ? project.tags.map((tag) => (
-                      <Card.Tags key={tag}>{tag}</Card.Tags>
-                    ))
-                  : null}
-              </div> */}
               <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-amber-500 dark:text-zinc-200">
                 <LinkIcon className="h-6 w-6 flex-none" />
                 <span className="ml-2">{project.link.label}</span>

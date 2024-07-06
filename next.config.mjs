@@ -10,6 +10,9 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
+  images: {
+    domains: ['images.unsplash.com'],
+  },
 }
 
 const withMDX = nextMDX({
