@@ -38,7 +38,7 @@ export function ArticleLayout({
   return (
     <>
       <Head>
-        <title>{`${meta.title} - Khant Sithu`}</title>
+        <title>{`${meta.title} - Brian Sithu`}</title>
         <meta name="description" content={meta.description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1600" />
