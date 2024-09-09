@@ -6,4 +6,4 @@ Allow: /
 Host: https://www.khantsithu.me
 
 # Sitemaps
-Sitemap: https://www.khantsithu.me/sitemap.xml
+Sitemap: https://www.briansithu.com/sitemap.xml
