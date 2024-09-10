@@ -5,6 +5,9 @@ import { Container } from '@/components/Container'
 import { Prose } from '@/components/Prose'
 import { formatDate } from '@/lib/formatDate'
 import { createOgImage } from '@/lib/createOgImage'
+import { Manrope } from 'next/font/google'
+
+const manrope = Manrope({ subsets: ['latin'] })
 
 function ArrowLeftIcon(props) {
   return (
@@ -46,7 +49,7 @@ export function ArticleLayout({
         <meta property="og:image:alt" content={meta.title} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Container className="mt-16 lg:mt-32">
+      <Container className={`mt-16 lg:mt-32 ${manrope.className}`}>
         <div className="xl:relative">
           <div className="mx-auto max-w-2xl">
             {previousPathname && (
