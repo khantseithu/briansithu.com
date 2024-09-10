@@ -27,8 +27,9 @@ function classNames(...classes) {
 }
 
 export default function Pricing() {
+
     return (
-        <div className="relative isolate bg-white dark:bg-zinc-900 px-6 py-24 sm:py-32 lg:px-8">
+        <div className="relative isolate px-6 py-24 sm:py-32 lg:px-8">
             <div className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl dark:hidden" aria-hidden="true">
                 <div
                     className="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
