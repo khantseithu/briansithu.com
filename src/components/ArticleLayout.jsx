@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
@@ -34,6 +35,20 @@ export function ArticleLayout({
     meta: ['khantsithu - software developer', meta.date].join(' · '),
   })
 
+  const [scrollProgress, setScrollProgress] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.body.scrollHeight - window.innerHeight
+      const scrollPosition = window.scrollY
+      const progress = (scrollPosition / totalHeight) * 100
+      setScrollProgress(progress)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   if (isRssFeed) {
     return children
   }
@@ -49,6 +64,12 @@ export function ArticleLayout({
         <meta property="og:image:alt" content={meta.title} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <div
+        className={`fixed top-0 left-0 h-1 z-50 transition-all duration-300 ease-out bg-gradient-to-r from-black to-gray-700 dark:from-gray-800 dark:to-gray-600`}
+        style={{
+          width: `${scrollProgress}%`,
+        }}
+      />
       <Container className={`mt-16 lg:mt-32 ${manrope.className}`}>
         <div className="xl:relative">
           <div className="mx-auto max-w-2xl">
