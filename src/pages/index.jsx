@@ -96,8 +96,19 @@ function AcademicCap(props) {
 
 function ArrowRightIcon(props) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" {...props}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+      />
     </svg>
   )
 }
@@ -160,7 +171,7 @@ function Resume() {
       company: 'Viabells',
       title: 'Software Engineer | Full Stack',
       logo: logoViabells,
-      website: "https://www.viabells.com/",
+      website: 'https://www.viabells.com/',
       start: '2024',
       end: {
         label: 'Present',
@@ -171,7 +182,7 @@ function Resume() {
       company: 'Beyond Limits Technology',
       title: 'Software Engineer | Full Stack',
       logo: logoBeyondLimit,
-      website: "https://www.beyondlimitsmm.com/",
+      website: 'https://www.beyondlimitsmm.com/',
       start: '2023',
       end: {
         label: '2024',
@@ -182,7 +193,7 @@ function Resume() {
       company: 'Upwork',
       title: 'Freelance Software Developer',
       logo: logoUpwork,
-      website: "https://www.upwork.com/",
+      website: 'https://www.upwork.com/',
       start: '2023',
       end: {
         label: 'Present',
@@ -232,7 +243,12 @@ function Resume() {
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
               <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                <Link href={role?.website} target="_blank" rel="noopener noreferrer" className='hover:underline'>
+                <Link
+                  href={role?.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
                   {role.company}
                 </Link>
               </dd>
@@ -243,8 +259,9 @@ function Resume() {
               <dt className="sr-only">Date</dt>
               <dd
                 className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-                aria-label={`${role.start.label ?? role.start} until ${role.end.label ?? role.end
-                  }`}
+                aria-label={`${role.start.label ?? role.start} until ${
+                  role.end.label ?? role.end
+                }`}
               >
                 <time dateTime={role.start.dateTime ?? role.start}>
                   {role.start.label ?? role.start}
@@ -258,7 +275,7 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <a href="https://cv.khantsithu.me" target='_blank' rel="noreferrer">
+      <a href="https://cv.briansithu.com" target="_blank" rel="noreferrer">
         <div
           href="#"
           className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-md bg-zinc-50 px-3 py-2 text-sm font-medium text-zinc-900 outline-offset-2 transition hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 active:transition-none dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70"
@@ -340,8 +357,9 @@ function Education() {
               <dt className="sr-only">Date</dt>
               <dd
                 className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-                aria-label={`${role.start.label ?? role.start} until ${role.end.label ?? role.end
-                  }`}
+                aria-label={`${role.start.label ?? role.start} until ${
+                  role.end.label ?? role.end
+                }`}
               >
                 <time dateTime={role.start.dateTime ?? role.start}>
                   {role.start.label ?? role.start}
