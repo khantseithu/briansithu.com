@@ -18,6 +18,8 @@ import logoViabells from '@/images/logos/ViabellsLogo.png'
 
 import logoUoPeople from '@/images/logos/UoPeople.jpg'
 import logoUpwork from '@/images/logos/upwork.svg'
+// import logoDasomx from '@/images/logos/DASOMX.svg'
+import logoDasomx from '@/images/logos/DASOMX.jpeg'
 
 import Pricing from '@/components/Pricing'
 import image1 from '@/images/photos/image-1.jpg'
@@ -167,6 +169,17 @@ function Newsletter() {
 
 function Resume() {
   let resume = [
+    {
+      company: 'DASOMX',
+      title: 'AI Software Engineer | Full Stack',
+      logo: logoDasomx,
+      website: 'https://www.dasomx.com/',
+      start: '2024',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
     {
       company: 'Viabells',
       title: 'Software Engineer | Full Stack',
