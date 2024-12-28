@@ -474,9 +474,9 @@ export default function Home({ articles }) {
           </div>
         </div>
       </Container>
-      <Container className="mt-10 w-full md:mt-12">
+      {/* <Container className="mt-10 w-full md:mt-12">
         <Pricing />
-      </Container>
+      </Container> */}
     </>
   )
 }
