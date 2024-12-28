@@ -13,7 +13,7 @@ import logoCodeCraft from '@/images/logos/codecraft.svg'
 const projects = [
   {
     name: 'CodeCraft',
-    banner: "",
+    banner: '',
     description:
       'CodeCraft is my bootstrapped side project aiming to make coding more intuitive for complete beginners. I built CodeCraft to provide the structured, hands-on coding education I wish I had when starting out.',
     link: {
@@ -22,16 +22,16 @@ const projects = [
     },
     logo: logoCodeCraft,
     tags: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Prisma",
-      "Zustand",
-      "Stripe",
-      "Clerk",
-      "MySQL",
-      "Shadcn UI"
-    ]
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Prisma',
+      'Zustand',
+      'Stripe',
+      'Clerk',
+      'MySQL',
+      'Shadcn UI',
+    ],
   },
   {
     name: 'Fashion Fusion',
@@ -56,7 +56,7 @@ const projects = [
   },
   {
     name: 'GameHub',
-    banner: "",
+    banner: '',
     description:
       'A web application designed to help users discover new and exciting video games, featuring advanced filtering, infinite scrolling, and fully type-safe code.',
     link: {
@@ -76,7 +76,7 @@ const projects = [
   },
   {
     name: 'Wild Oasis',
-    banner: "",
+    banner: '',
     description:
       'A custom-built application for managing a small boutique hotel called "Wild Oasis" with 8 luxurious wooden cabins, handling bookings, cabin management, and guest information, serving as an internal application used to check-in guests upon arrival. The backend of the application is built with Supabase.',
     link: {
@@ -95,7 +95,7 @@ const projects = [
   },
   {
     name: 'Tech Mart',
-    banner: "",
+    banner: '',
     description:
       ' A full-stack e-commerce web application built with the MERN stack, offering browsing of tech products, user authentication, cart functionality, product rating and reviews, and PayPal integration.',
     link: {
@@ -115,7 +115,7 @@ const projects = [
   },
   {
     name: 'Streamify',
-    banner: "",
+    banner: '',
     description:
       'A music streaming app (Spotify clone) with advanced features including song upload, Stripe payment integration, sleek UI design, responsiveness, authentication, favorites/playlists, and more.',
     link: {
@@ -127,7 +127,7 @@ const projects = [
   },
   {
     name: 'SummariAi',
-    banner: "",
+    banner: '',
     description:
       "A web application utilizing OpenAI's GPT-4 to generate summaries of articles, offering efficient summarization using React.js, Vite.js, Redux Toolkit, and OpenAI's GPT-4.",
     link: {
@@ -154,7 +154,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects - Khant Si Thu</title>
+        <title>Projects - Brian Sithu</title>
         <meta
           name="description"
           content="Things I’ve made trying to put my dent in the universe."
@@ -170,7 +170,7 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <Card as="li" key={project.name}>
-              <div className="relative z-10 flex items-center justify-center p-2 rounded-lg bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800">
+              <div className="relative z-10 flex items-center justify-center rounded-lg bg-white p-2 shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800">
                 <Image
                   src="https://images.unsplash.com/photo-1720157974034-cdb419e50002?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt=""

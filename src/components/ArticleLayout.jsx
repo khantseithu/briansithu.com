@@ -56,7 +56,7 @@ export function ArticleLayout({
   return (
     <>
       <Head>
-        <title>{`${meta.title} - Khant Si Thu`}</title>
+        <title>{`${meta.title} - Brian Sithu`}</title>
         <meta name="description" content={meta.description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1600" />
@@ -65,7 +65,7 @@ export function ArticleLayout({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div
-        className={`fixed top-0 left-0 h-1 z-50 transition-all duration-300 ease-out bg-gradient-to-r from-black to-gray-700 dark:from-gray-800 dark:to-gray-600`}
+        className={`fixed left-0 top-0 z-50 h-1 bg-gradient-to-r from-black to-gray-700 transition-all duration-300 ease-out dark:from-gray-800 dark:to-gray-600`}
         style={{
           width: `${scrollProgress}%`,
         }}
