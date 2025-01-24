@@ -1,0 +1,276 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: 'Brian Sithu',
+  date: '2025-01-24',
+  title: "software design patterns: what i've learned",
+  description:
+    'sharing my journey with software patterns as a full-stack typescript engineer. exploring how these patterns have streamlined my development, enhanced code clarity, and improved maintainability across both front-end and back-end.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+software patterns are essential for writing robust and maintainable code. as a full-stack typescript engineer, i rely on them daily to navigate the complexities of front-end and back-end development. if you're interested in writing cleaner, more scalable applications, understanding software patterns is crucial. in this article, i want to share what i've learned about their practical value, especially within a typescript full-stack context, showing how i apply them in my projects.
+
+## why patterns matter (my experience, beyond theory)
+
+early in my career, like many developers, i was just trying to make things _work_. the code got the job done, but often lacked structure. it became complex, debugging felt like a scavenger hunt, and revisiting older code was like deciphering hieroglyphics. that's when the practical value of patterns really hit me. they aren't just academic concepts; they're battle-tested solutions refined over decades.
+
+they come from real-world problems, capturing best practices from experienced developers. applying patterns has significantly improved my workflow and the quality of my code in real ways:
+
+- **reduce boilerplate - more than just less code:** patterns offer structured ways to handle common tasks, which naturally means less repetitive code. but for me, it’s more about creating predictable structures. typescript's strong typing really amplifies this, ensuring type safety within these structures, helping catch errors early and making refactoring safer. think about form validation – writing that logic over and over for each form? using a pattern to encapsulate and reuse validation rules has saved me so much time and prevented countless errors.
+
+- **improve code readability - finding a common language:** well-known patterns are like a shared vocabulary. when i use patterns, other developers (and my future self!) can quickly understand the _intent_ of my code. it’s similar to using design principles in architecture; if you know those principles, you can understand a building’s structure more easily. for me, this has reduced cognitive load, sped up onboarding for new team members, and made collaboration much smoother.
+
+- **enhance maintainability - building for change:** patterns encourage modularity and separation of concerns. it's not just about "neat" code; it's about fundamentally simplifying modifications and extensions. changes become more localized, which really reduces the risk of breaking things unexpectedly – so vital for long-term projects and team collaboration. i think of it as building with components that i can swap out or update without having to rebuild everything.
+
+- **accelerate problem-solving - learning from others' experience:** instead of starting from zero every time i face a common design problem, i can use established patterns to efficiently solve recurring issues. it’s about reusing proven solutions, not "reinventing the wheel". this has sped up my development, reduced bugs, and let me focus on the unique parts of the application instead of constantly fighting basic architectural problems.
+
+in full-stack development, patterns aren't limited to one area; they're relevant across the whole stack. from structuring front-end components (like composition in react) to designing backend apis (like the repository pattern for data access in node.js) and even database interactions, patterns give me valuable frameworks for building complex systems.
+
+## patterns i use daily
+
+this isn't every pattern out there, but these are key patterns i use a lot in my full-stack typescript projects. for me, understanding these has been foundational and i use them all the time in real-world scenarios.
+
+- **component composition (react) - building uis like lego:** breaking down uis into reusable components and composing them is just fundamental to react development. it's more than just making small components; it's about creating relationships and hierarchies that make ui structures flexible and easy to maintain. typescript interfaces and types are incredibly helpful for defining clear contracts between components.
+
+  ```typescript jsx
+  interface ButtonProps {
+    label: string
+    onClick: () => void
+    icon?: React.ReactNode
+  }
+
+  const Button: React.FC<ButtonProps> = ({ label, onClick, icon }) => (
+    <button onClick={onClick}>
+      {icon && <span className="button-icon">{icon}</span>} {label}
+    </button>
+  )
+
+  interface CardProps {
+    title: string
+    children: React.ReactNode
+  }
+
+  const Card: React.FC<CardProps> = ({ title, children }) => (
+    <div className="card">
+      <h3>{title}</h3>
+      <div className="card-content">{children}</div>
+    </div>
+  )
+
+  const ExampleComponent: React.FC = () => (
+    <Card title="User Actions">
+      <Button
+        label="Save"
+        onClick={() => console.log('Save clicked')}
+        icon={<i className="fas fa-save"></i>}
+      />
+      <Button label="Cancel" onClick={() => console.log('Cancel clicked')} />
+    </Card>
+  )
+  ```
+
+  **example explanation:** here, `button` and `card` are composed. `card` takes `children`, so we can put anything inside it, like our `button` components. typescript interfaces make sure the props are type-safe, making composition predictable and less error-prone. this pattern really helps with reusability and clear ui structure. in my projects, this is how i build complex uis – not as one big thing, but by composing smaller, manageable, and testable components.
+
+- **container/presentational components (react) - keeping ui concerns separate:** separating components that handle data, state, and logic (containers) from those just rendering ui (presentational) is key for maintainable react apps. it’s about keeping concerns clearly separated in your ui code. typescript helps a lot here with well-defined props and interfaces, making data flow explicit and type-safe.
+
+  ```typescript jsx
+  interface UserListProps {
+    users: { id: number; name: string }[]
+  }
+
+  const UserList: React.FC<UserListProps> = ({ users }) => (
+    <ul>
+      {users.map((user) => (
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
+  )
+
+  const UserListContainer: React.FC = () => {
+    const [users, setUsers] = React.useState<UserListProps['users']>([])
+    const [loading, setLoading] = React.useState(true)
+
+    React.useEffect(() => {
+      fetch('/api/users')
+        .then((res) => res.json())
+        .then((data) => {
+          setUsers(data)
+          setLoading(false)
+        })
+    }, [])
+
+    if (loading) return <p>Loading users...</p>
+    return <UserList users={users} />
+  }
+  ```
+
+  **example explanation:** `userlist` just renders users passed as props. `userlistcontainer` fetches data, manages loading state, and then renders `userlist`, passing the fetched users. this separation makes components more focused, testable, and reusable. in larger react applications, this pattern is essential for managing complexity and keeping things maintainable. containers handle the "what" and "why" (data, logic), and presentational components handle the "how" (rendering).
+
+- **repository pattern (backend/node.js) - abstracting data stuff:** abstracting data access behind a repository interface makes backend code more testable and database-agnostic. it’s a layer between your app logic and the database. typescript interfaces are great for defining these repository contracts, ensuring type safety across your data layer.
+
+  ```typescript
+  interface UserRepository {
+    getUserById(id: number): Promise<User | null>
+    getAllUsers(): Promise<User[]>
+    createUser(user: User): Promise<User>
+  }
+
+  class PrismaUserRepository implements UserRepository {
+    private prismaClient: PrismaClient
+
+    constructor(prismaClient: PrismaClient) {
+      this.prismaClient = prismaClient
+    }
+
+    async getUserById(id: number): Promise<User | null> {
+      return this.prismaClient.user.findUnique({ where: { id } })
+    }
+
+    async getAllUsers(): Promise<User[]> {
+      return this.prismaClient.user.findMany()
+    }
+
+    async createUser(user: User): Promise<User> {
+      return this.prismaClient.user.create({ data: user })
+    }
+  }
+
+  class UserService {
+    private userRepository: UserRepository
+
+    constructor(userRepository: UserRepository) {
+      this.userRepository = userRepository
+    }
+
+    async fetchUser(id: number): Promise<User | null> {
+      return this.userRepository.getUserById(id)
+    }
+
+    async listAllUsers(): Promise<User[]> {
+      return this.userRepository.getAllUsers()
+    }
+  }
+
+  const prisma = new PrismaClient()
+  const userRepository = new PrismaUserRepository(prisma)
+  const userService = new UserService(userRepository)
+  ```
+
+  **example explanation:** `userrepository` interface defines data operations. `prismauserrepository` uses prisma orm. `userservice` uses `userrepository` interface. this means i could switch databases (say, from postgresql to mongodb) just by making a new repository, without changing the service or app logic. it also makes testing easier – i can mock `userrepository` without needing a real database. in backend systems, this pattern is key for maintainability and being adaptable to different technologies.
+
+- **factory pattern (general) - cleaner object creation:** when you need to create objects but want to keep the creation logic separate from the rest of your code, factories are really useful. it's about centralizing object creation. typescript's type system makes sure factories return the right types of objects, which adds robustness. i find factories especially helpful when object creation is complex, depends on settings, or when i might want to swap out implementations easily.
+
+  ```typescript
+  interface Logger {
+    log(message: string): void
+  }
+
+  class ConsoleLogger implements Logger {
+    log(message: string): void {
+      console.log(`[Console Logger]: ${message}`)
+    }
+  }
+
+  class FileLogger implements Logger {
+    private filePath: string
+    constructor(filePath: string) {
+      this.filePath = filePath
+    }
+    log(message: string): void {
+      console.log(`[File Logger - ${this.filePath}]: ${message}`)
+    }
+  }
+
+  class LoggerFactory {
+    static createLogger(type: 'console' | 'file', options?: any): Logger {
+      switch (type) {
+        case 'console':
+          return new ConsoleLogger()
+        case 'file':
+          if (!options?.filePath) {
+            throw new Error('File path required for FileLogger')
+          }
+          return new FileLogger(options.filePath)
+        default:
+          throw new Error(`Unknown logger type: ${type}`)
+      }
+    }
+  }
+
+  const consoleLog = LoggerFactory.createLogger('console')
+  consoleLog.log('Application started')
+
+  const fileLog = LoggerFactory.createLogger('file', { filePath: 'app.log' })
+  fileLog.log('User logged in')
+  ```
+
+  **example explanation:** `loggerfactory` centralizes logger creation. the code using the logger doesn't create `consolelogger` or `filelogger` directly. it asks the factory for a logger of a certain type. this separates the code from specific logger types. i could add a new logger (like `database logger`) just by changing the factory, without touching the code that uses loggers. in my projects, factories help manage object dependencies, create complex objects, and handle different configurations for object creation.
+
+- **observer pattern (general) - handling events more cleanly:** for events and notifications, the observer pattern is a classic. think pub/sub, event emitters, or ui events. it lets objects (observers) subscribe to events from another object (subject) and get notified when things happen. typescript's event types can be strongly typed, making event handling safer.
+
+  ```typescript
+  interface EventObserver {
+    update(eventName: string, data: any): void
+  }
+
+  class ConcreteObserver implements EventObserver {
+    private id: string
+    constructor(id: string) {
+      this.id = id
+    }
+    update(eventName: string, data: any): void {
+      console.log(
+        `Observer ${this.id} received event: ${eventName} with data:`,
+        data
+      )
+    }
+  }
+
+  class EventSubject {
+    private observers: EventObserver[] = []
+
+    subscribe(observer: EventObserver): void {
+      this.observers.push(observer)
+    }
+
+    unsubscribe(observer: EventObserver): void {
+      this.observers = this.observers.filter((obs) => obs !== observer)
+    }
+
+    notify(eventName: string, data: any): void {
+      this.observers.forEach((observer) => observer.update(eventName, data))
+    }
+  }
+
+  const subject = new EventSubject()
+  const observer1 = new ConcreteObserver('1')
+  const observer2 = new ConcreteObserver('2')
+
+  subject.subscribe(observer1)
+  subject.subscribe(observer2)
+
+  subject.notify('userLoggedIn', { userId: 123 })
+  subject.unsubscribe(observer2)
+  subject.notify('itemAddedToCart', { itemId: 456 })
+  ```
+
+  **example explanation:** `eventsubject` keeps track of `eventobserver` instances. observers subscribe to the subject. when an event happens (`notify`), the subject tells all subscribers. this separates the subject from its observers – the subject doesn't need to know details about each observer. in ui, event listeners on buttons use the observer pattern. in backend, pub/sub for message queues and event-driven microservices use it a lot too. it helps keep things loosely coupled and makes event handling flexible.
+
+## continuing to learn about patterns
+
+these are just a few patterns to get started with. the world of software patterns is huge. for me, learning them is ongoing. it’s not about just memorizing names, but really understanding the _problems_ they solve and how they can improve your code in real, complex situations.
+
+some things that have helped me learn more:
+
+- **focus first, then explore:** pick a couple of patterns that seem relevant to what you're working on and really dig into them. understand their variations, trade-offs, and best practices. once you're comfortable, branch out to other patterns.
+- **look at real code - learn from others:** analyze well-structured open-source projects, especially in typescript and using frameworks you use. see how they actually use patterns. pay attention to the context, what problems they're solving, and how they adapt patterns to fit.
+- **practice and think about it:** the best way i've learned patterns is by using them. try them out in your projects, and actively try to use them in your daily code. but also, think about _why_ you're using a pattern. is it really the best way? are there other options? thinking critically is key to really understanding patterns.
+- **go beyond the basics:** the "gang of four" book is a great start, but things have moved on. explore patterns for web dev, async code, microservices, and functional programming. there are patterns for pretty much every part of software engineering.
+
+software patterns aren't a magic fix, and they're not strict rules. but they are powerful tools – a set of proven ways of doing things and a shared language for building better software. as a full-stack typescript engineer, i've found them essential for building robust, scalable, maintainable, and more enjoyable applications.
+
+keep exploring patterns, try them out, and let's build better software together.
+
+-- brian sithu
