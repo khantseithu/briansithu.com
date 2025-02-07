@@ -185,10 +185,10 @@ function Resume() {
       title: 'Software Engineer | Full Stack',
       logo: logoViabells,
       website: 'https://www.viabells.com/',
-      start: '2024',
+      start: 'May 2024',
       end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
+        label: '2024',
+        dateTime: 2024,
       },
     },
     {
