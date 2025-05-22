@@ -170,6 +170,17 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
+      company: 'Upwork',
+      title: 'Freelance Software Developer',
+      logo: logoUpwork,
+      website: 'https://www.upwork.com/',
+      start: '2023',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
+    {
       company: 'DASOMX',
       title: 'AI Software Engineer | Full Stack',
       logo: logoDasomx,
@@ -200,17 +211,6 @@ function Resume() {
       end: {
         label: '2024',
         dateTime: 2024,
-      },
-    },
-    {
-      company: 'Upwork',
-      title: 'Freelance Software Developer',
-      logo: logoUpwork,
-      website: 'https://www.upwork.com/',
-      start: '2023',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
       },
     },
     // {
