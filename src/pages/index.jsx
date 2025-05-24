@@ -184,39 +184,6 @@ function Resume() {
       },
     },
     {
-      school: 'Udemy',
-      title: 'Various Courses',
-      logo: logoUdemy,
-      link: 'https://www.udemy.com/user/brian-sithu/',
-      start: 'Ongoing',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
-    },
-    {
-      school: 'Coursera',
-      title: 'Various Courses',
-      logo: logoCoursera,
-      link: 'https://www.coursera.org/learner/brian-sithu',
-      start: 'Ongoing',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
-    },
-    {
-      school: 'YouTube',
-      title: 'Various Channels & Educational Content',
-      logo: logoYouTube,
-      link: 'https://www.youtube.com/@codewithbrian',
-      start: 'Ongoing',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
-    },
-    {
       company: 'DASOMX',
       title: 'AI Software Engineer | Full Stack',
       logo: logoDasomx,
@@ -343,7 +310,41 @@ function Education() {
       school: 'University of The People',
       title: 'BSc in Computer Science',
       logo: logoUoPeople,
+      link: 'https://www.uopeople.edu/',
       start: '2022',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
+    {
+      school: 'Udemy',
+      title: 'Various Courses',
+      logo: logoUdemy,
+      link: 'https://www.udemy.com/user/brian-sithu/',
+      start: 'Ongoing',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
+    {
+      school: 'Coursera',
+      title: 'Various Courses',
+      logo: logoCoursera,
+      link: 'https://www.coursera.org/learner/brian-sithu',
+      start: 'Ongoing',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
+    {
+      school: 'YouTube',
+      title: 'Various Channels & Educational Content',
+      logo: logoYouTube,
+      link: 'https://www.youtube.com/@codewithbrian',
+      start: 'Ongoing',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
