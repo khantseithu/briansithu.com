@@ -20,6 +20,9 @@ import logoUoPeople from '@/images/logos/UoPeople.jpg'
 import logoUpwork from '@/images/logos/upwork.svg'
 // import logoDasomx from '@/images/logos/DASOMX.svg'
 import logoDasomx from '@/images/logos/DASOMX.jpeg'
+import logoUdemy from '@/images/logos/udemy.svg'
+import logoCoursera from '@/images/logos/coursera.svg'
+import logoYouTube from '@/images/logos/youtube.svg'
 
 import Pricing from '@/components/Pricing'
 import image1 from '@/images/photos/image-1.jpg'
@@ -175,6 +178,39 @@ function Resume() {
       logo: logoUpwork,
       website: 'https://www.upwork.com/',
       start: '2023',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
+    {
+      school: 'Udemy',
+      title: 'Various Courses',
+      logo: logoUdemy,
+      link: 'https://www.udemy.com/user/brian-sithu/',
+      start: 'Ongoing',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
+    {
+      school: 'Coursera',
+      title: 'Various Courses',
+      logo: logoCoursera,
+      link: 'https://www.coursera.org/learner/brian-sithu',
+      start: 'Ongoing',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
+    {
+      school: 'YouTube',
+      title: 'Various Channels & Educational Content',
+      logo: logoYouTube,
+      link: 'https://www.youtube.com/@codewithbrian',
+      start: 'Ongoing',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
@@ -470,7 +506,7 @@ export default function Home({ articles }) {
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             {/* <Newsletter /> */}
             <Resume />
-            {/* <Education /> */}
+            <Education />
           </div>
         </div>
       </Container>
